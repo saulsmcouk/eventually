@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import backend.util
+import backend.real_relevant_messages
 import random
 
 app = Flask(__name__)
@@ -38,8 +39,28 @@ def moderate():
         moderation_q[chosen_message_ind][2]
     )
 
+    context = con.get_message_context(
+        moderation_q[chosen_message_ind][0],
+        moderation_q[chosen_message_ind][1],
+        moderation_q[chosen_message_ind][2]
+    )
+
+    context = backend.real_relevant_messages.rank_messages(message, context)
+    print(context)
+    print(context)
+
+
     user = con.get_user_information(moderation_q[chosen_message_ind][0])
-    
+    chat = [
+        {
+            'messageText': m["raw_message"],
+            'user': m["account_id"],
+            "timestamp": m["timestamp"],
+            "relatedness": m["similarity_score"],
+            "relevantFlag": m["relevantFlag"]
+        } for m in context
+    ] 
+    print(chat)
     # # [{
     #     messageText,
     #     user,
@@ -66,7 +87,7 @@ def moderate():
         average_game_time = float(user["session_duration"]) / float(user["session_count"]),
         alliance_id = moderation_q[chosen_message_ind][1],
         level = user["level"],
-        chat_json = {},
+        chat = chat,
         flags = flags,
         country_code = "" # includes relevance
         )
