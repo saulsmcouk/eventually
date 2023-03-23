@@ -118,86 +118,39 @@
                 <div class="container1">
                     <div class="section1">
                         <div class="other-quote-parent">
-                            <div class="other-quote">
-                                <div class="blockquote">
-                                    <div class="left-border"></div>
-                                    <div class="quote-wrap">
-                                        <i class="quote">“Hello”</i>
-                                        <div class="text4">
-                                            - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                                            11:03:05
-                                        </div>
-                                    </div>
-                                    <div class="quote-wrap1">
-                                        <div class="quote1">78% related</div>
-                                        <div class="text5">
-                                            - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                                            11:03:05
-                                        </div>
-                                    </div>
-                                    <div class="left-border1"></div>
-                                </div>
-                                <div class="content2">
-                                    <div class="heading-and-supporting-text">
-                                        <div class="supporting-text1">0.6 severity</div>
-                                    </div>
-                                    <div class="actions1">
-                                        <div class="button">
-                                            <div class="button-base4">
-                                                <div class="text6">Learn more</div>
+                            {% for item in chat %}
+                                {% if item['relevantFlag'] %}
+                                    <div class="other-quote">
+                                        <div class="blockquote">
+                                            <div class="left-border"></div>
+                                            <div class="quote-wrap">
+                                                <i class="quote">“{{ item['messageText'] }}”</i>
+                                                <div class="text4">
+                                                    - <span class="clanuser">{{ item['user'] }}</span>, {{ item['timestamp'] }}
+                                                </div>
                                             </div>
+                                            <div class="quote-wrap1">
+                                                <div class="quote1">{{ item['relatedness']*100|round }}% related</div>
+                                                <div class="text5">
+                                                    - <span class="clanuser">{{ item['user'] }}</span>, {{ item['timestamp'] }}
+                                                </div>
+                                            </div>
+                                            <div class="left-border1"></div>
                                         </div>
-                                        <div class="button-01">
-                                            <div class="button-base5">
-                                                <div class="text6">Get started</div>
+                                        <div class="content2">
+                                            <div class="heading-and-supporting-text">
+                                                <div class="supporting-text1">x severity</div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="other-quote">
-                                <div class="blockquote">
-                                    <div class="left-border"></div>
-                                    <div class="quote-wrap">
-                                        <i class="quote">“Hey!”</i>
-                                        <div class="text4">
-                                            - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                                            11:03:05
-                                        </div>
+                                {% else %}
+                                    <div class="additional-details">
+                                        <a href="#">
+                                            <div class="type-of-work">View {{ items|length - loop.index0 + 2 }} messages</div>
+                                        </a>
                                     </div>
-                                    <div class="quote-wrap1">
-                                        <div class="quote1">56% related</div>
-                                        <div class="text5">
-                                            - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                                            11:03:05
-                                        </div>
-                                    </div>
-                                    <div class="left-border1"></div>
-                                </div>
-                                <div class="content2">
-                                    <div class="heading-and-supporting-text">
-                                        <div class="supporting-text1">0.6 severity</div>
-                                    </div>
-                                    <div class="actions1">
-                                        <div class="button">
-                                            <div class="button-base4">
-                                                <div class="text6">Learn more</div>
-                                            </div>
-                                        </div>
-                                        <div class="button-01">
-                                            <div class="button-base5">
-                                                <div class="text6">Get started</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="additional-details">
-
-                                <a href="#">
-                                    <div class="type-of-work">View 5 messages</div>
-                                </a>
-                            </div>
+                                {% endif %}
+                            {% endfor %}
                             <div class="blockquote-parent">
                                 <div class="blockquote2">
                                     <div class="left-border4"></div>
