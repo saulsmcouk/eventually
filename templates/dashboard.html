@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}"/>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+    />
+</head>
+<body>
+<div class="desktop">
+    <div class="sidebar-navigation">
+        <div class="content">
+            <div class="nav">
+                <div class="header">
+                    <div class="logomark">
+                        <img class="content-icon" alt="" src="../static/public/content.svg"/>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <div class="nav-item-button">
+                        <img class="home-icon" alt="" src="../static/public/home.svg"/>
+                    </div>
+                    <div class="nav-item-button1">
+                        <img class="home-icon" alt="" src="../static/public/barchart2.svg"/>
+                    </div>
+                    <div class="nav-item-button2">
+                        <img class="home-icon" alt="" src="../static/public/barchart21.svg"/>
+                    </div>
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/3layers.svg"/>
+                    </div>
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/checksquare.svg"/>
+                    </div>
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/flag.svg"/>
+                    </div>
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/users.svg"/>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div class="navigation1">
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/lifebuoy.svg"/>
+                    </div>
+                    <div class="nav-item-button1">
+                        <img class="home-icon" alt="" src="../static/public/settings.svg"/>
+                    </div>
+                </div>
+                <img class="divider-icon" alt="" src="../static/public/divider.svg"/><img
+                    class="avatar-icon"
+                    alt=""
+                    src="../static/public/avatar@2x.png"
+            />
+            </div>
+        </div>
+    </div>
+    <div class="main-wrap">
+        <div class="main">
+            <div class="header-section">
+                <div class="container">
+                    <div class="page-header">
+                        <div class="content1">
+                            <div class="text-and-supporting-text">
+                                <div class="text">Hi there, Albert</div>
+                                <div class="supporting-text">
+                                    View the latest messages for moderation.
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="button-04">
+                                    <div class="button-base">
+                                        <div class="import">Tertiary</div>
+                                    </div>
+                                </div>
+                                <div class="button-03">
+                                    <div class="button-base1">
+                                        <div class="import">Secondary</div>
+                                    </div>
+                                </div>
+                                <div class="button-02">
+                                    <div class="button-base2">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/uploadcloud.svg"
+                                        />
+                                        <div class="import">Import</div>
+                                    </div>
+                                </div>
+                                <div class="button-01">
+                                    <div class="button-base3">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/plus.svg"
+                                        />
+                                        <div class="import">Add customer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button">
+                        <a href="{{ url_for('moderate') }}">
+                            <div class="button-base4">
+                                <div class="text4">Start Moderation</div>
+                                <img class="home-icon" alt="" src="../static/public/play.svg"/>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container1">
+                    <div class="section1">
+                        <div class="section-header">
+                            <div class="content1">
+                                <div class="text5">Reports Today</div>
+                                <div class="actions1">
+                                    <div class="dropdown">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/morevertical.svg"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="activity-gauge">
+                            <div class="activitiy-gauge">
+                                <img
+                                        class="ring-outer-icon"
+                                        alt=""
+                                        src="../static/public/ring-outer.svg"
+                                /><img
+                                    class="ring-middle-icon"
+                                    alt=""
+                                    src="../static/public/ring-middle.svg"
+                            /><img
+                                    class="ring-inner-icon"
+                                    alt=""
+                                    src="../static/public/ring-inner.svg"
+                            />
+                                <div class="number">316</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section2">
+                        <div class="section-header">
+                            <div class="content1">
+                                <div class="text5">Total Reported Messages</div>
+                                <div class="actions1">
+                                    <div class="dropdown">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/morevertical1.svg"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="divider"></div>
+                        </div>
+                        <div class="line-and-bar-chart">
+                            <div class="axis">
+                                <div class="y-axis-label">
+                                    <div class="text7">Reported Messages</div>
+                                </div>
+                                <div class="content4">
+                                    <div class="legend">
+                                        <div class="legend-series">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color.svg"
+                                            />
+                                            <div class="series-1">2022</div>
+                                        </div>
+                                        <div class="legend-series">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color1.svg"
+                                            />
+                                            <div class="series-1">2021</div>
+                                        </div>
+                                        <div class="legend-series">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color2.svg"
+                                            />
+                                            <div class="series-1">2020</div>
+                                        </div>
+                                        <div class="legend-series3">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color3.svg"
+                                            />
+                                            <div class="series-1">Series 4</div>
+                                        </div>
+                                        <div class="legend-series3">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color4.svg"
+                                            />
+                                            <div class="series-1">Series 5</div>
+                                        </div>
+                                        <div class="legend-series3">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color5.svg"
+                                            />
+                                            <div class="series-1">Series 6</div>
+                                        </div>
+                                    </div>
+                                    <div class="y-axis">
+                                        <div class="y-axis-line">
+                                            <div class="number1">1,000</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider1.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number1">800</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider2.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number1">600</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider3.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number1">400</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider4.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number1">200</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider5.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number1">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="x-axis">
+                                        <div class="jan">Jan</div>
+                                        <div class="jan">Feb</div>
+                                        <div class="jan">Mar</div>
+                                        <div class="jan">Apr</div>
+                                        <div class="jan">May</div>
+                                        <div class="jan">Jun</div>
+                                        <div class="jan">Jul</div>
+                                        <div class="jan">Aug</div>
+                                        <div class="jan">Sep</div>
+                                        <div class="jan">Oct</div>
+                                        <div class="jan">Nov</div>
+                                        <div class="jan">Dec</div>
+                                    </div>
+                                    <div class="x-axis-label">
+                                        <div class="text8">Month</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img
+                                    class="chart-data-icon"
+                                    alt=""
+                                    src="../static/public/-chart-data.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="metric-group">
+                        <div class="metric-item">
+                            <div class="heading-and-dropdown">
+                                <div class="heading">Total Messages Sent (Month)</div>
+                                <div class="dropdown">
+                                    <img
+                                            class="upload-cloud-icon"
+                                            alt=""
+                                            src="../static/public/morevertical2.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="number-and-chart">
+                                <div class="number-and-badge">
+                                    <div class="number13">235k</div>
+                                    <div class="change-and-text">
+                                        <div class="change">
+                                            <img
+                                                    class="upload-cloud-icon"
+                                                    alt=""
+                                                    src="../static/public/arrowup.svg"
+                                            />
+                                            <div class="change1">40%</div>
+                                        </div>
+                                        <div class="text9">vs last month</div>
+                                    </div>
+                                </div>
+                                <img class="chart-icon" alt="" src="../static/public/-chart.svg"/>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="heading-and-dropdown">
+                                <div class="heading">New Users (Week)</div>
+                                <div class="dropdown">
+                                    <img
+                                            class="upload-cloud-icon"
+                                            alt=""
+                                            src="../static/public/morevertical3.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="number-and-chart">
+                                <div class="number-and-badge">
+                                    <div class="number13">12k</div>
+                                    <div class="change-and-text1">
+                                        <div class="change">
+                                            <img
+                                                    class="upload-cloud-icon"
+                                                    alt=""
+                                                    src="../static/public/arrowdown.svg"
+                                            />
+                                            <div class="change1">10%</div>
+                                        </div>
+                                        <div class="text9">vs last week</div>
+                                    </div>
+                                </div>
+                                <img class="chart-icon" alt="" src="../static/public/-chart1.svg"/>
+                            </div>
+                        </div>
+                        <div class="metric-item">
+                            <div class="heading-and-dropdown">
+                                <div class="heading">Users Online Now</div>
+                                <div class="dropdown">
+                                    <img
+                                            class="upload-cloud-icon"
+                                            alt=""
+                                            src="../static/public/morevertical4.svg"
+                                    />
+                                </div>
+                            </div>
+                            <div class="number-and-chart">
+                                <div class="number-and-badge">
+                                    <div class="number13">182k</div>
+                                    <div class="change-and-text">
+                                        <div class="change">
+                                            <img
+                                                    class="upload-cloud-icon"
+                                                    alt=""
+                                                    src="../static/public/arrowup1.svg"
+                                            />
+                                            <div class="change1">20%</div>
+                                        </div>
+                                        <div class="text9">vs last month</div>
+                                    </div>
+                                </div>
+                                <img class="chart-icon" alt="" src="../static/public/-chart2.svg"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container3">
+                    <div class="button1">
+                        <div class="button-base4">
+                            <div class="text4">Start Moderation</div>
+                            <img class="home-icon" alt="" src="../static/public/play.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
