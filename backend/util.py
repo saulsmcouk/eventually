@@ -3,13 +3,12 @@ import csv
 import json
 import pandas as pd 
 import ast
-from nltk.sentiment.vader import SentimentIntensityAnalyzer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 from tqdm import tqdm
 import torch
 
+
 class Connector(object):
-    
     def __init__(self, database_paths):
         self.df = pd.DataFrame()
         for path in database_paths:
@@ -19,7 +18,7 @@ class Connector(object):
 
         self.df = self.df.dropna(how='all')
         print(len(self.df))
-        
+
     def get_message_context(self, user_id, alliance_id, time, window_before = 10, window_after = 10):
         the_conversation = self.get_conversation(alliance_id)
         # idk why I need to do this 
@@ -29,8 +28,6 @@ class Connector(object):
                 before = max(0, i - window_before)
                 after = min(len(the_conversation) - 1, i + window_after)
                 return the_conversation[before:after]
-    
-        
 
     def get_conversation(self, alliance_id):
         conversation = self.df[self.df['alliance_id'] == alliance_id]
@@ -40,16 +37,9 @@ class Connector(object):
         all_messages = self.df[self.df['account_id'] == user_id]    
         return all_messages
 
+
 def print_transcript(convo):
     [print(f'{row["account_id"]}: {row["raw_message"]}') for id, row in convo.iterrows()]
-        
-def distilbert_sentiment_add(path, outpath):
-    message = "I love this fucking game"
-    
-
-    # 0 is neg, 1 is poz 
-    
-    print(logits)
     
 
 def add_sentiment_to_csv(path, outpath):
@@ -57,7 +47,6 @@ def add_sentiment_to_csv(path, outpath):
     with open(path, "r", encoding="utf-8") as f:
         reader = csv.reader(f)
         data = list(reader)
-
 
     print("loaded")
     header = data[0]
@@ -85,6 +74,7 @@ def add_sentiment_to_csv(path, outpath):
             writer = csv.writer(of)
             writer.writerow(row)
 
+
 def generate_user_baseline_sentiments(messages):
     user_sentiment_vals = {
         "neg": [],
@@ -102,10 +92,10 @@ def generate_user_baseline_sentiments(messages):
 
     for key in user_sentiment_vals.keys():
         user_sentiment_vals[key] = sum(user_sentiment_vals[key]) / len(user_sentiment_vals)
-    
-    
+
     return user_sentiment_vals
-            
+
+
 def get_reaction_strength(reacting_messages, con: Connector):
     """for each user, get their baseline, and then look at their messages"""
     reacting_messages = pd.DataFrame().from_records(reacting_messages)
@@ -151,28 +141,11 @@ def get_reaction_strength(reacting_messages, con: Connector):
         aggregate_diffs[key] = sum(aggregate_diffs[key]) / len(aggregate_diffs)
 
     return aggregate_diffs
-    # now, 1 more time - aggregate the diffs
 
-    # paths = ["backend\data-store\chat_messages_1.csv\chat_messages_1.csv", "backend\data-store\chat_messages_2.csv\chat_messages_2.csv"]
-    # print(typeof)
-    # print(con.get_conversation('11cf0f6b70280de8e21157a87da895c0db0dcc34222386600fb5d4959c88ee51'))
-    # add_sentiment_to_csv('backend\data-store\chat_messages_1.csv\chat_messages_1.csv', 'backend\data-store\messages-1-with-sentiment.csv')
 
 moderation_q = [
-    ['e668bc85eb3ed7f3ee45d55bf7ecd4aee7ff957753fc9b119da9a72fbb755661' , '11cf0f6b70280de8e21157a87da895c0db0dcc34222386600fb5d4959c88ee51', '20230301T031530.717Z'],
+    ['e668bc85eb3ed7f3ee45d55bf7ecd4aee7ff957753fc9b119da9a72fbb755661', '11cf0f6b70280de8e21157a87da895c0db0dcc34222386600fb5d4959c88ee51', '20230301T031530.717Z'],
     ['01d5d5afed4a055a6532ecc94fc3eebf78ca8117cadbf13acf7c4fa992901427', '4a8900ef0888491a6cfc2143bf8b6919281b30388c7ebacd65a980623c8b1704', '20230301T090721.129Z']
 ]
 
-# con = Connector([
-#     'backend\data-store\messages-1-with-sentiment.csv',
-#     'backend\data-store\messages-2-with-sentiment.csv'
-# ])
-# generate_baseline_sentiments(con, "user-baselines.json")
-# x = con.get_all_user_messages('b1ad85fb4c842467278733d49c2aed00933b9261f35427fe09a5b7596d44f734')
-# print(generate_user_baseline_sentiments(x))
-# for i in range(0, len(moderation_q)):
-#     messages = con.get_message_context(moderation_q[i][0], moderation_q[i][1], moderation_q[i][2], window_before=0)
-#     [print(message["raw_message"]) for message in messages]
-#     print(get_reaction_strength(messages, con))
-
-add_sentiment_to_csv('backend\data-store\chat_messages_1.csv\chat_messages_1.csv', 'backend\messages-1-tf.csv')
+add_sentiment_to_csv('data-store/chat_messages_1.csv/chat_messages_1.csv', 'messages-1-tf.csv')
