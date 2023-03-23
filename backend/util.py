@@ -12,6 +12,9 @@ class Connector(object):
             print(path)
             df = pd.read_csv(path) 
             self.df = pd.concat([self.df, df])
+
+        self.df = self.df.dropna(how='all')
+        print(len(self.df))
         
         
 
@@ -26,36 +29,40 @@ class Connector(object):
 def print_transcript(convo):
     [print(f'{row["account_id"]}: {row["raw_message"]}') for id, row in convo.iterrows()]
         
-# import pandas as pd
-from multiprocessing import Pool
-# from nltk.sentiment import SentimentIntensityAnalyzer
 
 def add_sentiment_to_csv(path, outpath):
     print("loading")
-    data = pd.read_csv(path)
+    with open(path, "r", encoding="utf-8") as f:
+        reader = csv.reader(f)
+        data = list(reader)
+
+    
 
     print("loaded")
-    header = list(data.columns)
+    header = data[0]
     header.append("sentiment")
 
-    # create the SentimentIntensityAnalyzer object once
-    sid = SentimentIntensityAnalyzer()
-
-    # define a function to calculate the sentiment for a single row
-    def calculate_sentiment(row):
-        scores = sid.polarity_scores(row[4])
-        row.append(scores)
-        return row
-
-    # use a multiprocessing pool to calculate the sentiment for each row
-    with Pool() as pool:
-        results = pool.map(calculate_sentiment, data.itertuples(index=False))
-
-    # write the results to a new CSV file
     with open(outpath, "w", encoding="utf-8") as of:
         writer = csv.writer(of)
         writer.writerow(header)
-        writer.writerows(results)
+
+    prog = 0
+
+    sid = SentimentIntensityAnalyzer()
+    for row in data[1:]:
+        scores = sid.polarity_scores(row[4])
+        row.append(scores)
+        prog += 1
+        if (prog % 100) == 0:
+            print(row[4])
+            print(prog)
+        
+        with open(outpath, "a", encoding="utf-8") as of:
+            writer = csv.writer(of)
+            writer.writerow(row)
+
+
+
 if __name__ == "__main__":
     # paths = ["backend\data-store\chat_messages_1.csv\chat_messages_1.csv", "backend\data-store\chat_messages_2.csv\chat_messages_2.csv"]
     # print(typeof)
