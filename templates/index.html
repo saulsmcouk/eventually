@@ -202,10 +202,9 @@
                                 <div class="blockquote2">
                                     <div class="left-border4"></div>
                                     <div class="quote-wrap4">
-                                        <i class="quote4">“Oh no! I dropped my foot balls</i>
+                                        <i class="quote4">{{ message_text }}</i>
                                         <div class="text12">
-                                            - <span class="clanuser">SuperUser</span>, 2/2/23 at
-                                            11:03:01
+                                            - <span class="clanuser">{{ username }}</span>, {{ timestamp }}
                                         </div>
                                     </div>
                                 </div>
@@ -215,8 +214,11 @@
                                         <div class="heading">5 reports</div>
                                         <div class="type-of-work-container">0.6 severity</div>
                                         <div class="type-of-work-container">
-                                            <span class="clanuser">#hate</span>,
-                                            <span class="clanuser">#rude</span>
+                                                    {% for item in flags %}
+        <span class="clanuser">#{{ item }}</span>{% if not loop.last %},{% endif %}
+        {% endfor %}
+<!--                                            <span class="clanuser">#hate</span>,-->
+<!--                                            <span class="clanuser">#rude</span>-->
                                         </div>
                                     </div>
                                     <div class="actions3">
@@ -308,11 +310,11 @@
                                         <b>Game ID:</b><span> Clash of Clans</span>
                                     </div>
                                     <div class="type-of-work-container">
-                                        <b>Room:</b><span> RoyalClashers</span>
+                                        <b>Level:</b><span> {{ level }}</span>
                                     </div>
                                     <div class="type-of-work-container">
                                         <b class="alliance-id">Alliance ID:</b><span> </span
-                                    ><span><a href="#"><span class="clanuser">ABCD1234</span></a></span>
+                                    ><span><a href="#"><span class="clanuser">alliance_id</span></a></span>
                                     </div>
                                     <div class="type-of-work-container">
                                         <b>Alliance Description:</b
@@ -321,13 +323,13 @@
                                 </div>
                                 <div class="text-group">
                                     <div class="type-of-work-container">
-                                        <b>Timestamp:</b><span> 01/02/23 at 11:03pm (US)</span>
+                                        <b>Timestamp:</b><span> {{ timestamp }} ({{ country_code }})</span>
                                     </div>
                                     <div class="type-of-work-container">
-                                        <b>Last Seen:</b><span> 02/04/23 at 12:04pm (US)</span>
+                                        <b>Last Seen:</b><span> {{ user_last_seen }} (US)</span>
                                     </div>
                                     <div class="type-of-work-container">
-                                        <b>Average Game Time:</b><span> 26 min</span>
+                                        <b>Average Game Time:</b><span> {{ average_game_time }}</span>
                                     </div>
                                     <div class="type-of-work-container">
                                         <b>Devices:</b><span> iPhone 12 Pro, iPad Mini</span>
