@@ -19,7 +19,9 @@ def moderate():
     # get the data - a specific message
     # data - engagment =?
     # pick the next message somehow 
-    # message_id = 
+
 
     return render_template("index.html")
 
+if __name__ == "__main__":
+    app.run(debug=True)
