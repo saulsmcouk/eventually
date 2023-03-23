@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Eventually Moderation</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <style>
+         .pane {
+         background: rgba(145, 145, 145, 0.3);
+         font-size: large;
+         border-radius: 10px;
+         }
+         .custom-badge {
+  width: 30px;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  background-color: red;
+}
+
+      </style>
+      <script>
+        // functionality:
+        // ignore and ban just get next message
+        // message supervisor opens some way of messaging hte supervisor with our suggestion, it goes next you get a toast 
+        // click on chat gives the full chat
+        
+
+        // data the backend needs to provide 
+        // chat log, which messages we think are interesting 
+        // the tag
+        // our suggestion for waht we think it is 
+        // and the user pane information
+        // possible suggestions: reaction strength, if it's a slur, harmful ideation
+      </script>
+   </head>
+   <body>
+      <div class="d-flex align-items-center justify-content-center" style="height: 30vh;">
+         <div class="container text-center">
+            <div class="row gx-5" style="padding-bottom: 10px" id="contentRow">
+               <div class="col-2 pane" style="font-size: 20px;" id="userPane">
+                  <h3>Info Pane</h3>
+                  <ul>
+                     <li id="username">Username</li>
+                     <li id="engagementLevel">Engagement</li>
+                     <li id="accountAge">Acccount Age</li>
+                     <li id="numberOfReports">Number of Reports</li>
+                     <li><span id=""risk class="badge badge-primary rounded-circle custom-badge">1</span></li>
+                  </ul>
+               </div>
+               <div class="col-1">
+                  <!--shh-->
+               </div>
+               <div class="col-8 pane justify-content-end"  id="centrePane">
+                  <div class=""container>
+                     <div class="row">
+                        line 1 of chat <br>
+                        line 2 of chat <br>
+                        line 3 of chat (most relevant) <br>
+                        <button id="expandBtn" class="btn btn-primary">Expand the history</button>
+                     </div>
+                     <hr>
+                     <div class="row">
+                        <div class="card">
+                           <blockquote>
+                              <h1 id="message">I hate this <b>fucking</b> game</h1>
+                              <h5><emph>We think this might be <b>racism/a slur</b></emph></h5>
+                           </blockquote>
+                        </div>
+                     </div>
+                     <div id="ourOpinionDiv" class="row">
+                        
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="container">
+      <div class="row" id="actionRow">
+         <div class="col-3">
+            <button style="width: 100%" class="btn btn-primary" type="button">Ignore</button>
+         </div>
+         <div class="col-6">
+            <button style="width: 100%" class="btn btn-warning">Message supervisor</button>
+         </div>
+         <div class="col-3">
+            <button style="width: 100%" class="btn btn-danger">Ban</button>
+         </div>
+      </div>
+    </div>
+      </div>   
+      </div> 
+   </body>
+</html>
