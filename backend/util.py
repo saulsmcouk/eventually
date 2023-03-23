@@ -103,7 +103,6 @@ def get_reaction_strength(reacting_messages, con: Connector):
     }
     diffs = []
     for user in user_baselines.keys():
-    
         this_user_messages = reacting_messages[reacting_messages["account_id"] == user]
         user_reaction_sentiments = {
             "compound": [],
@@ -127,6 +126,11 @@ def get_reaction_strength(reacting_messages, con: Connector):
         
         print("-----------------------------\nUSER REACTION DIFFS")
         print(user_reaction_diffs)
+        print("------------------")
+        diffs.append(user_reaction_diffs)
+    
+    for diff
+    # now, 1 more time - aggregate the diffs
 
     # paths = ["backend\data-store\chat_messages_1.csv\chat_messages_1.csv", "backend\data-store\chat_messages_2.csv\chat_messages_2.csv"]
     # print(typeof)
