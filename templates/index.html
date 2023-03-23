@@ -36,7 +36,11 @@
         // the tag
         // our suggestion for waht we think it is 
         // and the user pane information
-        // possible suggestions: reaction strength, if it's a slur, harmful ideation
+        // possible suggestions: reaction strength, if it's a slur, harmful ideation 
+
+
+        // data we need - stuff from the files, a list of slurs, and sentiment
+        // tasks - assign sentiment to every message 
       </script>
    </head>
    <body>
@@ -46,11 +50,11 @@
                <div class="col-2 pane" style="font-size: 20px;" id="userPane">
                   <h3>Info Pane</h3>
                   <ul>
-                     <li id="username">Username</li>
-                     <li id="engagementLevel">Engagement</li>
-                     <li id="accountAge">Acccount Age</li>
-                     <li id="numberOfReports">Number of Reports</li>
-                     <li><span id=""risk class="badge badge-primary rounded-circle custom-badge">1</span></li>
+                     <li id="username">{{ username }}</li>
+                     <li id="engagementLevel">{{ engagement }}</li>
+                     <li id="accountAge">{{ account_age }}</li>
+                     <li id="numberOfReports">{{ number_of_reports }}</li>
+                     <li><span id=""risk class="badge badge-primary rounded-circle custom-badge"> {{ user_risk }}</span></li>
                   </ul>
                </div>
                <div class="col-1">
@@ -68,8 +72,8 @@
                      <div class="row">
                         <div class="card">
                            <blockquote>
-                              <h1 id="message">I hate this <b>fucking</b> game</h1>
-                              <h5><emph>We think this might be <b>racism/a slur</b></emph></h5>
+                              <h1 id="message">{{ message }}</h1>
+                              <h5 id="suggestion"> {{ suggestion }}</h5>
                            </blockquote>
                         </div>
                      </div>
