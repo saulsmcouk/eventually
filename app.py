@@ -38,9 +38,22 @@ def moderate():
 
     user = con.get_user_information(moderation_q[chosen_message_ind][0])
     
-
+    # # [{
+    #     messageText,
+    #     user,
+    #     timestamp,
+    #     relatedness,
+    #     relevantFlag
+    # #   }]
+    flags = []
+    for key in message.keys():
+        print(key)
+        if key.replace("_","").isupper():
+            if int(message[key]) >= 2:
+                flags.append(key)
     print(message)
     print(user)
+    print(flags)
 
     return render_template(
         "index.html",
@@ -52,7 +65,7 @@ def moderate():
         alliance_id = moderation_q[chosen_message_ind][1],
         level = user["level"],
         chat_json = {},
-        flags = [],
+        flags = flags,
         country_code = "" # includes relevance
         )
 
