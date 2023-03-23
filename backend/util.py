@@ -18,6 +18,9 @@ class Connector(object):
             self.df = pd.concat([self.df, df])
 
         self.df = self.df.dropna(how='all')
+
+        self.users_df = pd.read_csv("backend\data-store\\accounts.csv\\accounts.csv")
+
         print(len(self.df))
         
     def get_message_context(self, user_id, alliance_id, time, window_before = 10, window_after = 10):
@@ -39,6 +42,13 @@ class Connector(object):
     def get_all_user_messages(self, user_id):
         all_messages = self.df[self.df['account_id'] == user_id]    
         return all_messages
+
+    def get_individual_message(self, user_id, alliance_id, time):
+        message = self.df[(self.df["account_id"] == user_id) & (self.df["alliance_id"] == alliance_id) & (self.df["timestamp"] == time)].iloc[0]
+        return message.to_dict()
+
+    def get_user_information(self, user_id):
+        return self.users_df[self.users_df["account_id"] == user_id].iloc[0].to_dict()
 
 def print_transcript(convo):
     [print(f'{row["account_id"]}: {row["raw_message"]}') for id, row in convo.iterrows()]
@@ -175,4 +185,4 @@ moderation_q = [
 #     [print(message["raw_message"]) for message in messages]
 #     print(get_reaction_strength(messages, con))
 
-add_sentiment_to_csv('backend\data-store\chat_messages_1.csv\chat_messages_1.csv', 'backend\messages-1-tf.csv')
+# add_sentiment_to_csv('backend\data-store\chat_messages_1.csv\chat_messages_1.csv', 'backend\messages-1-tf.csv')
