@@ -20,33 +20,48 @@
     <div class="sidebar-navigation">
         <div class="content">
             <div class="nav">
+                
                 <div class="header">
-                    <div class="logomark">
-                        <img class="content-icon" alt="" src="../static/public/content.svg"/>
-                    </div>
+                    <a href="javascript:window.location.href=window.location.href">
+                        <div class="logomark">
+                            <img class="content-icon" alt="" src="../static/public/content.svg"/>
+                        </div>
+                    </a>
                 </div>
                 <div class="navigation">
-                    <div class="nav-item-button">
-                        <img class="home-icon" alt="" src="../static/public/home.svg"/>
-                    </div>
+                    <a href="javascript:window.location.href=window.location.href">
+                        <div class="nav-item-button">
+                            <img class="home-icon" alt="" src="../static/public/home.svg"/>
+                        </div>
+                    </a>
+                                        <a href="javascript:window.location.href=window.location.href">
                     <div class="nav-item-button1">
                         <img class="home-icon" alt="" src="../static/public/barchart2.svg"/>
                     </div>
+                    </a>
+                                        <a href="javascript:window.location.href=window.location.href">
                     <div class="nav-item-button2">
                         <img class="home-icon" alt="" src="../static/public/barchart21.svg"/>
                     </div>
+                                        </a>
                     <div class="nav-item-button3">
                         <img class="home-icon" alt="" src="../static/public/3layers.svg"/>
                     </div>
+                                        <a href="javascript:window.location.href=window.location.href">
                     <div class="nav-item-button3">
                         <img class="home-icon" alt="" src="../static/public/checksquare.svg"/>
                     </div>
+                                        </a>
+                                        <a href="javascript:window.location.href=window.location.href">
                     <div class="nav-item-button3">
                         <img class="home-icon" alt="" src="../static/public/flag.svg"/>
                     </div>
+                                        </a>
+                                        <a href="javascript:window.location.href=window.location.href">
                     <div class="nav-item-button3">
                         <img class="home-icon" alt="" src="../static/public/users.svg"/>
                     </div>
+                                        </a>
                 </div>
             </div>
             <div class="footer">
@@ -54,15 +69,17 @@
                     <div class="nav-item-button3">
                         <img class="home-icon" alt="" src="../static/public/lifebuoy.svg"/>
                     </div>
-                    <div class="nav-item-button1">
-                        <img class="home-icon" alt="" src="../static/public/settings.svg"/>
-                    </div>
+                    <a href="javascript:window.location.href=window.location.href">
+                        <div class="nav-item-button1">
+                            <img class="home-icon" alt="" src="../static/public/settings.svg"/>
+                        </div>
+                    </a>
                 </div>
-                <img class="divider-icon" alt="" src="../static/public/divider.svg"/><img
-                    class="avatar-icon"
-                    alt=""
-                    src="../static/public/avatar@2x.png"
-            />
+                <a href="javascript:window.location.href=window.location.href"><img class="divider-icon" alt="" src="../static/public/divider.svg"/><img
+                        class="avatar-icon"
+                        alt=""
+                        src="../static/public/avatar@2x.png"
+                /></a>
             </div>
         </div>
     </div>
@@ -157,10 +174,15 @@
                                     </div>
                                 </div>
                                 <div class="content4">
-                                    <img class="home-icon" alt="" src="../static/public/frown.svg"/>
+                                    {% if reaction_pos > 0.5 %}
+                                        <img class="home-icon" alt="" src="../static/public/smile.svg"/>
+                                    {% else %}
+                                        <img class="home-icon" alt="" src="../static/public/frown.svg"/>
+                                    {% endif %}
+
                                     <div class="heading-and-supporting-text2">
                                         <div class="heading">5 reports</div>
-                                        <div class="type-of-work-container">0.6 severity</div>
+                                        <div class="type-of-work-container">{{ (100*reaction_pos)|round|int  }}%  sentiment</div>
                                         <div class="type-of-work-container">
                                                     {% for item in flags %}
         <span class="clanuser">#{{ item }}</span>{% if not loop.last %},{% endif %}
@@ -251,7 +273,7 @@
                         <div class="divider"></div>
                         <div class="section-header">
                             <div class="button">
-                                <a href="#">
+                                <a href="javascript:window.location.href=window.location.href">
                                     <div class="button-base12">
                                         <img
                                                 class="upload-cloud-icon"
@@ -263,7 +285,7 @@
                                 </a>
                             </div>
                             <div class="button">
-                                <a href="#">
+                                <a href="javascript:window.location.href=window.location.href">
                                     <div class="button-base12">
                                         <div class="import">Next</div>
                                         <img
@@ -331,7 +353,7 @@
                             <div class="button-parent">
                                 <div class="dropdown">
                                     <div class="button10">
-                                        <a href="#">
+                                        <a href="javascript:window.location.href=window.location.href">
                                             <div class="button-base14">
                                                 <div class="import">Mark as Harassment</div>
                                                 <img
@@ -343,23 +365,25 @@
                                         </a>
                                     </div>
                                     <div class="dropdown-content">
-                                        <a href="#">... Spam</a>
-                                        <a href="#">... Racism</a>
-                                        <a href="#">... Extremism</a>
-                                        <a href="#">... Hate</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Spam</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Racism</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Extremism</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Hate</a>
                                     </div>
                                 </div>
-                                <
-                                <div class="button11">
-                                    <div class="button-base15">
-                                        <div class="import">Ignore</div>
+
+                                <a href="javascript:window.location.href=window.location.href">
+                                    <div class="button11">
+                                        <div class="button-base15">
+                                            <div class="import">Ignore</div>
+                                        </div>
                                     </div>
-                                </div>
-                                >
+                                </a>
+
                             </div>
                             <div class="button-group">
                                 <div class="dropdown">
-                                    <a href="#">
+                                    <a href="javascript:window.location.href=window.location.href">
                                         <div class="button10">
                                             <div class="button-base16">
                                                 <div class="import">Permanent Ban</div>
@@ -372,8 +396,8 @@
                                         </div>
                                     </a>
                                     <div class="dropdown-content-secondary">
-                                        <a href="#">Temporary Ban (1 week)</a>
-                                        <a href="#">Temporary Ban (1 month)</a>
+                                        <a href="javascript:window.location.href=window.location.href">Temporary Ban (1 week)</a>
+                                        <a href="javascript:window.location.href=window.location.href">Temporary Ban (1 month)</a>
                                     </div>
                                 </div>
                                 <div class="button11">
@@ -384,7 +408,7 @@
                             </div>
                             <div class="button-container">
                                 <div class="button">
-                                    <a href="#">
+                                    <a href="javascript:window.location.href=window.location.href">
                                         <div class="button-base18">
                                             <div class="import">Wrong Language</div>
                                             <img
@@ -395,7 +419,7 @@
                                         </div>
                                     </a>
                                 </div>
-                                <a href="#">
+                                <a href="javascript:window.location.href=window.location.href">
                                     <div class="button15">
                                         <div class="button-base19">
                                             <div class="import">Ignore</div>
@@ -407,19 +431,12 @@
                                 <div class="textarea-input-field-base">
                                     <div class="textarea-input-field-base">
                                         <div class="label">Description</div>
-                                        <div class="input">
-                                            <div class="text38">
-                                                Enter a reason for escalation...
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="hint-text">
-                                        This is a hint text to help user.
+                                        <input class="input text38" placeholder="Enter a reason for escalation..." />
                                     </div>
                                 </div>
                             </div>
                             <div class="button">
-                                <a href="#">
+                                <a href="javascript:window.location.href=window.location.href">
                                     <div class="button-base15">
                                         <div class="import">Escalate</div>
                                     </div>
