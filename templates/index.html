@@ -130,7 +130,7 @@
                                                 </div>
                                             </div>
                                             <div class="quote-wrap1">
-                                                <div class="quote1">{{ item['relatedness']*100|round }}% related</div>
+                                                <div class="quote1">{{ (100*item.relatedness)|round|int  }}% related</div>
                                                 <div class="text5">
                                                     - <span class="clanuser">{{ item['user'] }}</span>, {{ item['timestamp'] }}
                                                 </div>

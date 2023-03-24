@@ -87,7 +87,7 @@ def moderate():
         average_game_time = float(user["session_duration"]) / float(user["session_count"]),
         alliance_id = moderation_q[chosen_message_ind][1],
         level = user["level"],
-        chat = chat,
+        chat = chat[1:],
         flags = flags,
         country_code = "" # includes relevance
         )
