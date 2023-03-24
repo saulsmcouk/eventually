@@ -3,8 +3,7 @@
 Use the latest release, main may be broken
 
 Requirements.txt is as follows (not in release, sorry!)
-
-``
+````
 absl-py==1.4.0
 astunparse==1.6.3
 beautifulsoup4==4.12.0
@@ -99,5 +98,5 @@ wasabi==1.1.1
 Werkzeug==2.2.3
 wrapt==1.15.0
 zipp==3.15.0
-``
+````
 
