@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import backend.util
+import backend.reaction
 import backend.real_relevant_messages
 import random
 
@@ -8,8 +9,8 @@ app = Flask(__name__)
 # Connect to the database
 
 con = backend.util.Connector([
-    'backend\data-store\messages-1-with-sentiment.csv',
-    'backend\data-store\messages-2-with-sentiment.csv'
+    'backend\messages-1-tf.csv'
+    'backend\messages-2-tf.csv'
 ])
 
 
@@ -43,6 +44,13 @@ def moderate():
         moderation_q[chosen_message_ind][0],
         moderation_q[chosen_message_ind][1],
         moderation_q[chosen_message_ind][2]
+    )
+
+    afterwards_context = con.get_message_context(
+        moderation_q[chosen_message_ind][0],
+        moderation_q[chosen_message_ind][1],
+        moderation_q[chosen_message_ind][2],
+        window_before= 0
     )
 
     context = backend.real_relevant_messages.rank_messages(message, context)
@@ -89,7 +97,9 @@ def moderate():
         level = user["level"],
         chat = chat[1:],
         flags = flags,
-        country_code = "" # includes relevance
+        country_code = "",
+        reaction_pos = backend.reaction.quantify_reaction(context)
+         # includes relevance
         )
 
 
