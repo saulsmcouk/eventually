@@ -10,6 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     //     chevronIcon.classList.toggle('rotate');
     // });
 
+    document.addEventListener('keydown', (e) => {
+        if ('npiwbmv'.includes(e.key.toLowerCase())) {
+            // e.preventDefault();
+            //Refresh page
+            window.location.reload();
+        }
+    });
+
     // Get the modal
     const modal = document.getElementById("myModal");
 
