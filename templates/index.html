@@ -1,639 +1,641 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
-    <link rel="stylesheet" href="../static/css/index.css" />
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="initial-scale=1, width=device-width"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/global.css') }}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}"/>
+    <link rel="stylesheet" href="../static/css/index.css"/>
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap"
     />
-  </head>
-  <body>
-    <div class="desktop">
-      <div class="sidebar-navigation">
+</head>
+<body>
+<div class="desktop">
+    <div class="sidebar-navigation">
         <div class="content">
-          <div class="nav">
-            <div class="header">
-              <div class="logomark">
-                <img class="content-icon" alt="" src="../static/public/content.svg" />
-              </div>
-            </div>
-            <div class="navigation">
-              <div class="nav-item-button">
-                <img class="home-icon" alt="" src="../static/public/home.svg" />
-              </div>
-              <div class="nav-item-button1">
-                <img class="home-icon" alt="" src="../static/public/barchart2.svg" />
-              </div>
-              <div class="nav-item-button2">
-                <img class="home-icon" alt="" src="../static/public/barchart21.svg" />
-              </div>
-              <div class="nav-item-button3">
-                <img class="home-icon" alt="" src="../static/public/3layers.svg" />
-              </div>
-              <div class="nav-item-button3">
-                <img class="home-icon" alt="" src="../static/public/checksquare.svg" />
-              </div>
-              <div class="nav-item-button3">
-                <img class="home-icon" alt="" src="../static/public/flag.svg" />
-              </div>
-              <div class="nav-item-button3">
-                <img class="home-icon" alt="" src="../static/public/users.svg" />
-              </div>
-            </div>
-          </div>
-          <div class="footer">
-            <div class="navigation1">
-              <div class="nav-item-button3">
-                <img class="home-icon" alt="" src="../static/public/lifebuoy.svg" />
-              </div>
-              <div class="nav-item-button1">
-                <img class="home-icon" alt="" src="../static/public/settings.svg" />
-              </div>
-            </div>
-            <img class="divider-icon" alt="" src="../static/public/divider.svg" /><img
-              class="avatar-icon"
-              alt=""
-              src="../static/public/avatar@2x.png"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="main-wrap">
-        <div class="main">
-          <div class="header-section">
-            <div class="container">
-              <div class="header-section">
-                <div class="content1">
-                  <div class="text-and-supporting-text">
-                    <div class="text">Message View</div>
-                    <div class="supporting-text">
-                      View the latest messages for moderation.
-                    </div>
-                  </div>
-                  <div class="actions">
-                    <div class="button-04">
-                      <div class="button-base">
-                        <div class="import">Tertiary</div>
-                      </div>
-                    </div>
-                    <div class="button-03">
-                      <div class="button-base1">
-                        <div class="import">Secondary</div>
-                      </div>
-                    </div>
-                    <div class="button-02">
-                      <div class="button-base2">
-                        <img
-                          class="upload-cloud-icon"
-                          alt=""
-                          src="../static/public/uploadcloud.svg"
-                        />
-                        <div class="import">Import</div>
-                      </div>
-                    </div>
-                    <div class="button-01">
-                      <div class="button-base3">
-                        <img
-                          class="upload-cloud-icon"
-                          alt=""
-                          src="../static/public/plus.svg"
-                        />
-                        <div class="import">Add customer</div>
-                      </div>
-                    </div>
-                  </div>
+            <div class="nav">
+                
+                <div class="header">
+                    <a href="javascript:window.location.href=window.location.href">
+                        <div class="logomark">
+                            <img class="content-icon" alt="" src="../static/public/content.svg"/>
+                        </div>
+                    </a>
                 </div>
-              </div>
+                <div class="navigation">
+                    <a href="javascript:window.location.href=window.location.href">
+                        <div class="nav-item-button">
+                            <img class="home-icon" alt="" src="../static/public/home.svg"/>
+                        </div>
+                    </a>
+                                        <a href="javascript:window.location.href=window.location.href">
+                    <div class="nav-item-button1">
+                        <img class="home-icon" alt="" src="../static/public/barchart2.svg"/>
+                    </div>
+                    </a>
+                                        <a href="javascript:window.location.href=window.location.href">
+                    <div class="nav-item-button2">
+                        <img class="home-icon" alt="" src="../static/public/barchart21.svg"/>
+                    </div>
+                                        </a>
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/3layers.svg"/>
+                    </div>
+                                        <a href="javascript:window.location.href=window.location.href">
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/checksquare.svg"/>
+                    </div>
+                                        </a>
+                                        <a href="javascript:window.location.href=window.location.href">
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/flag.svg"/>
+                    </div>
+                                        </a>
+                                        <a href="javascript:window.location.href=window.location.href">
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/users.svg"/>
+                    </div>
+                                        </a>
+                </div>
             </div>
-          </div>
-          <div class="section">
-            <div class="container1">
-              <div class="section1">
-                <div class="other-quote-parent">
-                  <div class="other-quote">
-                    <div class="blockquote">
-                      <div class="left-border"></div>
-                      <div class="quote-wrap">
-                        <i class="quote">“Hello”</i>
-                        <div class="text4">
-                          - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                          11:03:05
-                        </div>
-                      </div>
-                      <div class="quote-wrap1">
-                        <div class="quote1">78% related</div>
-                        <div class="text5">
-                          - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                          11:03:05
-                        </div>
-                      </div>
-                      <div class="left-border1"></div>
+            <div class="footer">
+                <div class="navigation1">
+                    <div class="nav-item-button3">
+                        <img class="home-icon" alt="" src="../static/public/lifebuoy.svg"/>
                     </div>
-                    <div class="content2">
-                      <div class="heading-and-supporting-text">
-                        <div class="supporting-text1">0.6 severity</div>
-                      </div>
-                      <div class="actions1">
-                        <div class="button">
-                          <div class="button-base4">
-                            <div class="text6">Learn more</div>
-                          </div>
+                    <a href="javascript:window.location.href=window.location.href">
+                        <div class="nav-item-button1">
+                            <img class="home-icon" alt="" src="../static/public/settings.svg"/>
                         </div>
-                        <div class="button-01">
-                          <div class="button-base5">
-                            <div class="text6">Get started</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="other-quote">
-                    <div class="blockquote">
-                      <div class="left-border"></div>
-                      <div class="quote-wrap">
-                        <i class="quote">“Hey!”</i>
-                        <div class="text4">
-                          - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                          11:03:05
-                        </div>
-                      </div>
-                      <div class="quote-wrap1">
-                        <div class="quote1">56% related</div>
-                        <div class="text5">
-                          - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                          11:03:05
-                        </div>
-                      </div>
-                      <div class="left-border1"></div>
-                    </div>
-                    <div class="content2">
-                      <div class="heading-and-supporting-text">
-                        <div class="supporting-text1">0.6 severity</div>
-                      </div>
-                      <div class="actions1">
-                        <div class="button">
-                          <div class="button-base4">
-                            <div class="text6">Learn more</div>
-                          </div>
-                        </div>
-                        <div class="button-01">
-                          <div class="button-base5">
-                            <div class="text6">Get started</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="additional-details">
-                    <div class="type-of-work">View 5 messages</div>
-                  </div>
-                  <div class="blockquote-parent">
-                    <div class="blockquote2">
-                      <div class="left-border4"></div>
-                      <div class="quote-wrap4">
-                        <i class="quote4">“Don’t be such an a**hole!!”</i>
-                        <div class="text12">
-                          - <span class="clanuser">SuperUser</span>, 2/2/23 at
-                          11:03:01
-                        </div>
-                      </div>
-                    </div>
-                    <div class="content4">
-                      <img class="home-icon" alt="" src="../static/public/frown.svg" />
-                      <div class="heading-and-supporting-text2">
-                        <div class="heading">5 reports</div>
-                        <div class="type-of-work-container">0.6 severity</div>
-                        <div class="type-of-work-container">
-                          <span class="clanuser">#hate</span>,
-                          <span class="clanuser">#rude</span>
-                        </div>
-                      </div>
-                      <div class="actions3">
-                        <div class="button">
-                          <div class="button-base4">
-                            <div class="text6">Learn more</div>
-                          </div>
-                        </div>
-                        <div class="button-01">
-                          <div class="button-base5">
-                            <div class="text6">Get started</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="other-quote">
-                    <div class="blockquote">
-                      <div class="left-border"></div>
-                      <div class="quote-wrap">
-                        <i class="quote">“Now I’m sad :(”</i>
-                        <div class="text4">
-                          - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                          11:03:05
-                        </div>
-                      </div>
-                      <div class="quote-wrap1">
-                        <div class="quote1">89% related</div>
-                        <div class="text5">
-                          - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                          11:03:05
-                        </div>
-                      </div>
-                      <div class="left-border1"></div>
-                    </div>
-                    <div class="content2">
-                      <div class="heading-and-supporting-text">
-                        <div class="supporting-text1">0.6 severity</div>
-                      </div>
-                      <div class="actions1">
-                        <div class="button">
-                          <div class="button-base4">
-                            <div class="text6">Learn more</div>
-                          </div>
-                        </div>
-                        <div class="button-01">
-                          <div class="button-base5">
-                            <div class="text6">Get started</div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="additional-details">
-                    <div class="type-of-work">View more messages</div>
-                  </div>
-                  <div class="text19">View context</div>
+                    </a>
                 </div>
-                <div class="additional-details2">
-                  <div class="user-parent">
-                    <img
-                      class="upload-cloud-icon"
-                      alt=""
-                      src="../static/public/user.svg"
-                    />
-                    <div class="type-of-work2">SuperUser</div>
-                  </div>
-                  <div class="type-of-work-container">
-                    3 previously reports:
-                    <span class="clanuser">Harassment</span>,
-                    <span class="clanuser">Spamming</span>,
-                    <span class="clanuser">Hate</span>
-                  </div>
-                </div>
-                <div class="additional-details-parent">
-                  <div class="legend-series">
-                    <div class="type-of-work3">Additional details</div>
-                    <img
-                      class="upload-cloud-icon"
-                      alt=""
-                      src="../static/public/chevrondown.svg"
-                    />
-                  </div>
-                  <div class="frame-parent">
-                    <div class="text-parent">
-                      <div class="type-of-work-container">
-                        <b>Game ID:</b><span> Clash of Clans</span>
-                      </div>
-                      <div class="type-of-work-container">
-                        <b>Room:</b><span> RoyalClashers</span>
-                      </div>
-                      <div class="type-of-work-container">
-                        <b class="alliance-id">Alliance ID:</b><span> </span
-                        ><span><span class="clanuser">ABCD1234</span></span>
-                      </div>
-                      <div class="type-of-work-container">
-                        <b>Alliance Description:</b
-                        ><span> The world’s best alliance!</span>
-                      </div>
-                    </div>
-                    <div class="text-group">
-                      <div class="type-of-work-container">
-                        <b>Timestamp:</b><span> 01/02/23 at 11:03pm (US)</span>
-                      </div>
-                      <div class="type-of-work-container">
-                        <b>Last Seen:</b><span> 02/04/23 at 12:04pm (US)</span>
-                      </div>
-                      <div class="type-of-work-container">
-                        <b>Average Game Time:</b><span> 26 min</span>
-                      </div>
-                      <div class="type-of-work-container">
-                        <b>Devices:</b><span> iPhone 12 Pro, iPad Mini</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="divider"></div>
-                <div class="section-header">
-                  <div class="button">
-                    <div class="button-base12">
-                      <img
-                        class="upload-cloud-icon"
+                <a href="javascript:window.location.href=window.location.href"><img class="divider-icon" alt="" src="../static/public/divider.svg"/><img
+                        class="avatar-icon"
                         alt=""
-                        src="../static/public/chevronleft.svg"
-                      />
-                      <div class="import">Previous</div>
-                    </div>
-                  </div>
-                  <div class="button">
-                    <div class="button-base12">
-                      <div class="import">Next</div>
-                      <img
-                        class="upload-cloud-icon"
-                        alt=""
-                        src="../static/public/chevronright.svg"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="text30">Keyboard Shortcuts</div>
-              </div>
-              <div class="section2">
-                <div class="section-header1">
-                  <div class="content6">
-                    <div class="text31">Actions</div>
-                    <div class="actions5">
-                      <div class="dropdown">
-                        <img
-                          class="upload-cloud-icon"
-                          alt=""
-                          src="../static/public/morevertical.svg"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="button-parent">
-                    <div class="button10">
-                      <div class="button-base14">
-                        <div class="import">Mark as Harassment</div>
-                        <img
-                          class="upload-cloud-icon"
-                          alt=""
-                          src="../static/public/chevrondown1.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="button11">
-                      <div class="button-base15">
-                        <div class="import">Ignore</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="button-group">
-                    <div class="button10">
-                      <div class="button-base16">
-                        <div class="import">Permanent Ban</div>
-                        <img
-                          class="upload-cloud-icon"
-                          alt=""
-                          src="../static/public/chevrondown2.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="button11">
-                      <div class="button-base15">
-                        <div class="import">Ignore</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="button-container">
-                    <div class="button">
-                      <div class="button-base18">
-                        <div class="import">Wrong Language</div>
-                        <img
-                          class="chevron-down-icon3"
-                          alt=""
-                          src="../static/public/chevrondown3.svg"
-                        />
-                      </div>
-                    </div>
-                    <div class="button15">
-                      <div class="button-base19">
-                        <div class="import">Ignore</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="textarea-input-field">
-                    <div class="textarea-input-field-base">
-                      <div class="textarea-input-field-base">
-                        <div class="label">Description</div>
-                        <div class="input">
-                          <div class="text38">
-                            Enter a reason for escalation...
-                          </div>
-                        </div>
-                      </div>
-                      <div class="hint-text">
-                        This is a hint text to help user.
-                      </div>
-                    </div>
-                  </div>
-                  <div class="button">
-                    <div class="button-base15">
-                      <div class="import">Escalate</div>
-                    </div>
-                  </div>
-                  <div class="divider1"></div>
-                </div>
-                <div class="line-and-bar-chart">
-                  <div class="axis">
-                    <div class="y-axis-label">
-                      <div class="text40">Reported Messages</div>
-                    </div>
-                    <div class="content7">
-                      <div class="legend">
-                        <div class="legend-series">
-                          <img
-                            class="color-icon"
-                            alt=""
-                            src="../static/public/color.svg"
-                          />
-                          <div class="supporting-text1">2021</div>
-                        </div>
-                        <div class="legend-series">
-                          <img
-                            class="color-icon"
-                            alt=""
-                            src="../static/public/color1.svg"
-                          />
-                          <div class="supporting-text1">2020</div>
-                        </div>
-                        <div class="legend-series">
-                          <img
-                            class="color-icon"
-                            alt=""
-                            src="../static/public/color2.svg"
-                          />
-                          <div class="supporting-text1">2019</div>
-                        </div>
-                        <div class="legend-series3">
-                          <img
-                            class="color-icon"
-                            alt=""
-                            src="../static/public/color3.svg"
-                          />
-                          <div class="supporting-text1">Series 4</div>
-                        </div>
-                        <div class="legend-series3">
-                          <img
-                            class="color-icon"
-                            alt=""
-                            src="../static/public/color4.svg"
-                          />
-                          <div class="supporting-text1">Series 5</div>
-                        </div>
-                        <div class="legend-series3">
-                          <img
-                            class="color-icon"
-                            alt=""
-                            src="../static/public/color5.svg"
-                          />
-                          <div class="supporting-text1">Series 6</div>
-                        </div>
-                      </div>
-                      <div class="y-axis">
-                        <div class="y-axis-line">
-                          <div class="number">1,000</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider1.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line1">
-                          <div class="number">800</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider2.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line1">
-                          <div class="number">600</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider3.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line1">
-                          <div class="number">400</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider4.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line1">
-                          <div class="number">200</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider5.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line1">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line6">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line6">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line6">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line6">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line6">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                        <div class="y-axis-line6">
-                          <div class="number">0</div>
-                          <img
-                            class="divider-icon1"
-                            alt=""
-                            src="../static/public/divider6.svg"
-                          />
-                        </div>
-                      </div>
-                      <div class="x-axis">
-                        <div class="jan">Jan</div>
-                        <div class="jan">Feb</div>
-                        <div class="jan">Mar</div>
-                        <div class="jan">Apr</div>
-                        <div class="jan">May</div>
-                        <div class="jan">Jun</div>
-                        <div class="jan">Jul</div>
-                        <div class="jan">Aug</div>
-                        <div class="jan">Sep</div>
-                        <div class="jan">Oct</div>
-                        <div class="jan">Nov</div>
-                        <div class="jan">Dec</div>
-                      </div>
-                      <div class="x-axis-label">
-                        <div class="text41">Month</div>
-                      </div>
-                    </div>
-                  </div>
-                  <img
-                    class="chart-data-icon"
-                    alt=""
-                    src="../static/public/-chart-data.svg"
-                  />
-                </div>
-              </div>
+                        src="../static/public/avatar@2x.png"
+                /></a>
             </div>
-            <div class="container2">
-              <div class="button">
-                <div class="button-base21">
-                  <div class="type-of-work3">Start Moderation</div>
-                  <img class="home-icon" alt="" src="../static/public/play.svg" />
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
     </div>
-    <script>
+    <div class="main-wrap">
+        <div class="main">
+            <div class="header-section">
+                <div class="container">
+                    <div class="header-section">
+                        <div class="content1">
+                            <div class="text-and-supporting-text">
+                                <div class="text">Message View</div>
+                                <div class="supporting-text">
+                                    View the latest messages for moderation.
+                                </div>
+                            </div>
+                            <div class="actions">
+                                <div class="button-04">
+                                    <div class="button-base">
+                                        <div class="import">Tertiary</div>
+                                    </div>
+                                </div>
+                                <div class="button-03">
+                                    <div class="button-base1">
+                                        <div class="import">Secondary</div>
+                                    </div>
+                                </div>
+                                <div class="button-02">
+                                    <div class="button-base2">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/uploadcloud.svg"
+                                        />
+                                        <div class="import">Import</div>
+                                    </div>
+                                </div>
+                                <div class="button-01">
+                                    <div class="button-base3">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/plus.svg"
+                                        />
+                                        <div class="import">Add customer</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section">
+                <div class="container1">
+                    <div class="section1">
+                        <div class="other-quote-parent">
+                            {% for item in chat %}
+                                {% if item['relevantFlag'] %}
+                                    <div class="other-quote">
+                                        <div class="blockquote">
+                                            <div class="left-border"></div>
+                                            <div class="quote-wrap">
+                                                <i class="quote">“{{ item['messageText'] }}”</i>
+                                                <div class="text4">
+                                                    - <span class="clanuser">{{ item['user'] }}</span>, {{ item['timestamp'] }}
+                                                </div>
+                                            </div>
+                                            <div class="quote-wrap1">
+                                                <div class="quote1">{{ (100*item.relatedness)|round|int  }}% related</div>
+                                                <div class="text5">
+                                                    - <span class="clanuser">{{ item['user'] }}</span>, {{ item['timestamp'] }}
+                                                </div>
+                                            </div>
+                                            <div class="left-border1"></div>
+                                        </div>
+                                        <div class="content2">
+                                            <div class="heading-and-supporting-text">
+                                                <div class="supporting-text1">x severity</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% else %}
+                                {% endif %}
+                            {% endfor %}
+                            <div class="blockquote-parent">
+                                <div class="blockquote2">
+                                    <div class="left-border4"></div>
+                                    <div class="quote-wrap4">
+                                        <i class="quote4">{{ message_text }}</i>
+                                        <div class="text12">
+                                            - <span class="clanuser">{{ username }}</span>, {{ timestamp }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="content4">
+                                    {% if reaction_pos > 0.5 %}
+                                        <img class="home-icon" alt="" src="../static/public/smile.svg"/>
+                                    {% else %}
+                                        <img class="home-icon" alt="" src="../static/public/frown.svg"/>
+                                    {% endif %}
 
-      
-    </script>
+                                    <div class="heading-and-supporting-text2">
+                                        <div class="heading">5 reports</div>
+                                        <div class="type-of-work-container">{{ (100*reaction_pos)|round|int  }}%  sentiment</div>
+                                        <div class="type-of-work-container">
+                                                    {% for item in flags %}
+        <span class="clanuser">#{{ item }}</span>{% if not loop.last %},{% endif %}
+        {% endfor %}
+<!--                                            <span class="clanuser">#hate</span>,-->
+<!--                                            <span class="clanuser">#rude</span>-->
+                                        </div>
+                                    </div>
+                                    <div class="actions3">
+                                        <div class="button">
+                                            <div class="button-base4">
+                                                <div class="text6">Learn more</div>
+                                            </div>
+                                        </div>
+                                        <div class="button-01">
+                                            <div class="button-base5">
+                                                <div class="text6">Get started</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="additional-details">
+                                <a href="#">
+                                    <div class="type-of-work">View more messages</div>
+                                </a>
+                            </div>
+                            <div class="text19">View context</div>
+                        </div>
+                        <div class="additional-details2">
+                            <div class="user-parent">
+                                <img
+                                        class="upload-cloud-icon"
+                                        alt=""
+                                        src="../static/public/user.svg"
+                                />
+                                <div class="type-of-work2">{{ username }}</div>
+                            </div>
+                            <div class="type-of-work-container">
+                                3 previously reports:
+                                <a href="#"><span class="clanuser">Harassment</span></a>,
+                                <a href="#"><span class="clanuser">Spamming</span></a>,
+                                <a href="#"><span class="clanuser">Hate</span></a>
+                            </div>
+                        </div>
+                        <div class="additional-details-parent">
+                            <div class="legend-series">
+                                <div class="type-of-work3">Additional details</div>
+                                <img
+                                        class="upload-cloud-icon"
+                                        alt=""
+                                        src="../static/public/chevrondown.svg"
+                                />
+                            </div>
+                            <div class="frame-parent">
+                                <div class="text-parent">
+                                    <div class="type-of-work-container">
+                                        <b>Game ID:</b><span> Clash of Clans</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>Level:</b><span> {{ level }}</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b class="alliance-id">Alliance ID:</b><span> </span
+                                    ><span><a href="#"><span class="clanuser">alliance_id</span></a></span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>Alliance Description:</b
+                                        ><span> The world’s best alliance!</span>
+                                    </div>
+                                </div>
+                                <div class="text-group">
+                                    <div class="type-of-work-container">
+                                        <b>Timestamp:</b><span> {{ timestamp }} ({{ country_code }})</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>Last Seen:</b><span> {{ user_last_seen }} (US)</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>Average Game Time:</b><span> {{ average_game_time }}</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>Devices:</b><span> iPhone 12 Pro, iPad Mini</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="section-header">
+                            <div class="button">
+                                <a href="javascript:window.location.href=window.location.href">
+                                    <div class="button-base12">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/chevronleft.svg"
+                                        />
+                                        <div class="import">Previous</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="button">
+                                <a href="javascript:window.location.href=window.location.href">
+                                    <div class="button-base12">
+                                        <div class="import">Next</div>
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/chevronright.svg"
+                                        />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="align-content: center"><a href="#">
+                            <div id="myBtn" class="text30">Keyboard Shortcuts</div>
+                        </a></div>
+                        <!-- The Modal -->
+                        <div id="myModal" class="modal">
+
+                            <!-- Modal content -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <span class="close">&times;</span>
+                                    <h2>Keyboard Shortcuts</h2>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="type-of-work-container">
+                                        <b>{Key} N</b><span> - Next message</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>{Key} P</b><span> - Previous message</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>{Key} I</b><span> - Ignore message</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>{Key} W</b><span> - Wrong language</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>{Key} B</b><span> - Ban user (preselected value)</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>{Key} M</b><span> - Mark message (preselected value)</span>
+                                    </div>
+                                    <div class="type-of-work-container">
+                                        <b>{Key} V</b><span> - View hidden messages</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="section2">
+                        <div class="section-header1">
+                            <div class="content6">
+                                <div class="text31">Actions</div>
+                                <div class="actions5">
+                                    <div class="dropdown">
+                                        <img
+                                                class="upload-cloud-icon"
+                                                alt=""
+                                                src="../static/public/morevertical.svg"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-parent">
+                                <div class="dropdown">
+                                    <div class="button10">
+                                        <a href="javascript:window.location.href=window.location.href">
+                                            <div class="button-base14">
+                                                <div class="import">Mark as Harassment</div>
+                                                <img
+                                                        class="upload-cloud-icon"
+                                                        alt=""
+                                                        src="../static/public/chevrondown1.svg"
+                                                />
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="dropdown-content">
+                                        <a href="javascript:window.location.href=window.location.href">... Spam</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Racism</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Extremism</a>
+                                        <a href="javascript:window.location.href=window.location.href">... Hate</a>
+                                    </div>
+                                </div>
+
+                                <a href="javascript:window.location.href=window.location.href">
+                                    <div class="button11">
+                                        <div class="button-base15">
+                                            <div class="import">Ignore</div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                            <div class="button-group">
+                                <div class="dropdown">
+                                    <a href="javascript:window.location.href=window.location.href">
+                                        <div class="button10">
+                                            <div class="button-base16">
+                                                <div class="import">Permanent Ban</div>
+                                                <img
+                                                        class="upload-cloud-icon"
+                                                        alt=""
+                                                        src="../static/public/chevrondown2.svg"
+                                                />
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-content-secondary">
+                                        <a href="javascript:window.location.href=window.location.href">Temporary Ban (1 week)</a>
+                                        <a href="javascript:window.location.href=window.location.href">Temporary Ban (1 month)</a>
+                                    </div>
+                                </div>
+                                <div class="button11">
+                                    <div class="button-base15">
+                                        <div class="import">Ignore</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button-container">
+                                <div class="button">
+                                    <a href="javascript:window.location.href=window.location.href">
+                                        <div class="button-base18">
+                                            <div class="import">Wrong Language</div>
+                                            <img
+                                                    class="chevron-down-icon3"
+                                                    alt=""
+                                                    src="../static/public/chevrondown3.svg"
+                                            />
+                                        </div>
+                                    </a>
+                                </div>
+                                <a href="javascript:window.location.href=window.location.href">
+                                    <div class="button15">
+                                        <div class="button-base19">
+                                            <div class="import">Ignore</div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="textarea-input-field">
+                                <div class="textarea-input-field-base">
+                                    <div class="textarea-input-field-base">
+                                        <div class="label">Description</div>
+                                        <input class="input text38" placeholder="Enter a reason for escalation..." />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <a href="javascript:window.location.href=window.location.href">
+                                    <div class="button-base15">
+                                        <div class="import">Escalate</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="divider1"></div>
+                        </div>
+                        <div class="line-and-bar-chart">
+                            <div class="axis">
+                                <div class="y-axis-label">
+                                    <div class="text40">Reported Messages</div>
+                                </div>
+                                <div class="content7">
+                                    <div class="legend">
+                                        <div class="legend-series">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color.svg"
+                                            />
+                                            <div class="supporting-text1">2021</div>
+                                        </div>
+                                        <div class="legend-series">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color1.svg"
+                                            />
+                                            <div class="supporting-text1">2020</div>
+                                        </div>
+                                        <div class="legend-series">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color2.svg"
+                                            />
+                                            <div class="supporting-text1">2019</div>
+                                        </div>
+                                        <div class="legend-series3">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color3.svg"
+                                            />
+                                            <div class="supporting-text1">Series 4</div>
+                                        </div>
+                                        <div class="legend-series3">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color4.svg"
+                                            />
+                                            <div class="supporting-text1">Series 5</div>
+                                        </div>
+                                        <div class="legend-series3">
+                                            <img
+                                                    class="color-icon"
+                                                    alt=""
+                                                    src="../static/public/color5.svg"
+                                            />
+                                            <div class="supporting-text1">Series 6</div>
+                                        </div>
+                                    </div>
+                                    <div class="y-axis">
+                                        <div class="y-axis-line">
+                                            <div class="number">1,000</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider1.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number">800</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider2.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number">600</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider3.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number">400</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider4.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number">200</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider5.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line1">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                        <div class="y-axis-line6">
+                                            <div class="number">0</div>
+                                            <img
+                                                    class="divider-icon1"
+                                                    alt=""
+                                                    src="../static/public/divider6.svg"
+                                            />
+                                        </div>
+                                    </div>
+                                    <div class="x-axis">
+                                        <div class="jan">Jan</div>
+                                        <div class="jan">Feb</div>
+                                        <div class="jan">Mar</div>
+                                        <div class="jan">Apr</div>
+                                        <div class="jan">May</div>
+                                        <div class="jan">Jun</div>
+                                        <div class="jan">Jul</div>
+                                        <div class="jan">Aug</div>
+                                        <div class="jan">Sep</div>
+                                        <div class="jan">Oct</div>
+                                        <div class="jan">Nov</div>
+                                        <div class="jan">Dec</div>
+                                    </div>
+                                    <div class="x-axis-label">
+                                        <div class="text41">Month</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <img
+                                    class="chart-data-icon"
+                                    alt=""
+                                    src="../static/public/-chart-data.svg"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="container2">
+                    <div class="button">
+                        <div class="button-base21">
+                            <div class="type-of-work3">Start Moderation</div>
+                            <img class="home-icon" alt="" src="../static/public/play.svg"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
   </body>
 </html>
