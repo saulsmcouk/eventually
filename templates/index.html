@@ -144,11 +144,6 @@
                                         </div>
                                     </div>
                                 {% else %}
-                                    <div class="additional-details">
-                                        <a href="#">
-                                            <div class="type-of-work">View {{ items|length - loop.index0 + 2 }} messages</div>
-                                        </a>
-                                    </div>
                                 {% endif %}
                             {% endfor %}
                             <div class="blockquote-parent">
@@ -188,43 +183,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="other-quote">
-                                <div class="blockquote">
-                                    <div class="left-border"></div>
-                                    <div class="quote-wrap">
-                                        <i class="quote">“Now I’m sad :(”</i>
-                                        <div class="text4">
-                                            - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                                            11:03:05
-                                        </div>
-                                    </div>
-                                    <div class="quote-wrap1">
-                                        <div class="quote1">89% related</div>
-                                        <div class="text5">
-                                            - <span class="clanuser">ClanUser</span>, 2/2/23 at
-                                            11:03:05
-                                        </div>
-                                    </div>
-                                    <div class="left-border1"></div>
-                                </div>
-                                <div class="content2">
-                                    <div class="heading-and-supporting-text">
-                                        <div class="supporting-text1">0.6 severity</div>
-                                    </div>
-                                    <div class="actions1">
-                                        <div class="button">
-                                            <div class="button-base4">
-                                                <div class="text6">Learn more</div>
-                                            </div>
-                                        </div>
-                                        <div class="button-01">
-                                            <div class="button-base5">
-                                                <div class="text6">Get started</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <div class="additional-details">
                                 <a href="#">
                                     <div class="type-of-work">View more messages</div>
@@ -239,7 +197,7 @@
                                         alt=""
                                         src="../static/public/user.svg"
                                 />
-                                <div class="type-of-work2">SuperUser</div>
+                                <div class="type-of-work2">{{ username }}</div>
                             </div>
                             <div class="type-of-work-container">
                                 3 previously reports:
