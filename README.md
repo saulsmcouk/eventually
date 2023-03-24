@@ -3,6 +3,8 @@
 Use the latest release, main may be broken
 
 Requirements.txt is as follows (not in release, sorry!)
+
+Runs on Windows!
 ````
 absl-py==1.4.0
 astunparse==1.6.3
