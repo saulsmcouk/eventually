@@ -1,5 +1,12 @@
 # eventually
 
+## Screenshots
+
+![Demo 1](demo_1.jpg)
+![Demo 2](demo_2.jpg)
+
+## Usage
+
 Use the latest release, main may be broken
 
 Requirements.txt is as follows (not in release, sorry!)
